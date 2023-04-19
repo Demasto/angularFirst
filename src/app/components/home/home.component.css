@@ -1,11 +1,3 @@
-app-header {
-  display: flex;
-  flex-flow: row nowrap;
-  justify-content: center;
-  align-items: center;
-  background-color: brown;
-  color: white;
-}
 
 .cards {
   margin-top: 5em ;
