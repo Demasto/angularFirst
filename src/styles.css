@@ -1,9 +1,0 @@
-body {
-  margin: 0;
-
-}
-app-root {
-  display: flex;
-  flex-flow: column nowrap;
-  height: 100vh;
-}
