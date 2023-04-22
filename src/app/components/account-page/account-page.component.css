@@ -1,0 +1,15 @@
+.profile {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  border: 1em solid black;
+
+
+}
+.profile * {
+  font-family: sans-serif;
+}
+img {
+  width: 300px;
+  border-radius: 3em;
+}

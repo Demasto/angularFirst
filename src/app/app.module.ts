@@ -12,6 +12,8 @@ import {AppRoutingModule} from "./app-routing.module";
 
 import {RouterLink, RouterLinkActive} from "@angular/router";
 import { HomeComponent } from './components/home/home.component';
+import { GameComponent } from './components/game/game.component';
+import { AccountPageComponent } from './components/account-page/account-page.component';
 
 
 @NgModule({
@@ -21,7 +23,9 @@ import { HomeComponent } from './components/home/home.component';
     HeaderComponent,
     CardComponent,
     LoginPageComponent,
-    HomeComponent
+    HomeComponent,
+    GameComponent,
+    AccountPageComponent
   ],
   imports: [
     BrowserModule,

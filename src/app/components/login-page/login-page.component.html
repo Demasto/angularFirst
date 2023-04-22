@@ -1,19 +1,21 @@
 <div class="node">
-<form method="post" class="form">
+<form class="form" (submit)="login(username.value, password.value)">
   <p>Log in or go to <a routerLink="/home">back</a>!</p>
   <ul>
     <li>
       <label for="username"><strong>Username</strong> </label>
-      <input type="text" id="username" placeholder=" DiMen" required>
+      <input #username type="text" id="username" placeholder=" DiMen" required>
     </li>
     <li>
       <label for="password"><strong>Password</strong> </label>
-      <input type="password" id="password" placeholder=" 1234" required>
+      <input #password type="password" id="password" placeholder=" 1234" required>
     </li>
     <li>
       <label for="submit" style="padding: 0"></label>
-      <input  type="button" id="submit" value="Login">
+      <button  type="submit" id="submit">Login</button>
     </li>
   </ul>
+
 </form>
+
 </div>

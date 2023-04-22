@@ -4,18 +4,48 @@
 app-login-page {
 
 }
-a {
-  position: absolute;
-  right: 5em;
-  color: white;
-  text-decoration: none;
+div {
+
+}
+h2 {
+  display: inline-block;
+}
+.div1 {
+  display: flex;
+  justify-content: center;
+  flex: 2 10 auto;
+  font-size: 1.5em;
 }
 
-a:hover {
+.div2 {
+  margin-left: 1em;
+  flex: 10 1 auto;
+  font-size: 1.5em;
+  justify-self: flex-start;
+}
+.div3 {
+  flex: 1 4 auto;
+  font-size: 1.5em;
+  display: flex;
+  justify-content: center;
+}
+
+.link {
+  text-decoration: none;
+  color: white;
+}
+
+#login {
+  display: none;
+}
+#logout {
+  display: block;
+}
+.link:hover {
   color: wheat;
   text-decoration: underline;
 }
-a:active {
+.link:active {
   color: white;
   text-decoration: underline;
 }

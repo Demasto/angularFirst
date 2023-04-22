@@ -1,0 +1,135 @@
+<div class="container">
+
+  <div id="text">
+    <h1 id=game-name><em>Пары</em></h1>
+    <div class="discription">
+      <h2>Суть игры:</h2>
+      <ol type="I">
+        <li>Игра представляет одинаковые пары картинок.</li>
+        <li>Изначально они перевернуты.</li>
+        <li>Нужно по очереди их переворачивать и искать одинаковые.</li>
+        <li>После переворачивания двух одинаковых картинок подряд они исчезают с игрового поля.</li>
+      </ol>
+      <h3>Попробуйте сыграть -->> <button (click)="startGame()">Начать</button></h3>
+    </div>
+  </div>
+
+  <div id="gameStart">
+
+    <div class="game">
+
+      <div class="game-card" (click)="rotateCard(0, 1)"  [ngClass]="{'game-card-active': arrayOfState[0]}">
+        <div class="front">
+          <img src="https://mobimg.b-cdn.net/v3/fetch/cd/cd9de44487eae25d189157640410f231.jpeg?w=1470&r=0.5625" alt="0">
+        </div>
+        <div class="back">
+          <img src="assets/images/авокадо2.png" alt="1">
+        </div>
+      </div>
+
+      <div class="game-card" (click)="rotateCard(1, 2)" [ngClass]="{'game-card-active': arrayOfState[1]}">
+        <div class="front">
+          <img src="https://mobimg.b-cdn.net/v3/fetch/cd/cd9de44487eae25d189157640410f231.jpeg?w=1470&r=0.5625" alt="0">
+        </div>
+        <div class="back">
+          <img src="assets/images/destiny.jpg" alt="2">
+        </div>
+      </div>
+
+      <div class="game-card"  (click)="rotateCard(2, 3)" [ngClass]="{'game-card-active': arrayOfState[2]}">
+        <div class="front">
+          <img src="https://mobimg.b-cdn.net/v3/fetch/cd/cd9de44487eae25d189157640410f231.jpeg?w=1470&r=0.5625" alt="0">
+        </div>
+        <div class="back">
+          <img src="assets/images/лимон.png" alt="3">
+        </div>
+      </div>
+
+      <div class="game-card" (click)="rotateCard(3, 2)" [ngClass]="{'game-card-active': arrayOfState[3]}">
+        <div class="front">
+          <img src="https://mobimg.b-cdn.net/v3/fetch/cd/cd9de44487eae25d189157640410f231.jpeg?w=1470&r=0.5625" alt="0">
+        </div>
+        <div class="back">
+          <img src="assets/images/destiny.jpg" alt="2">
+        </div>
+      </div>
+
+      <div class="game-card" (click)="rotateCard(4, 4)" [ngClass]="{'game-card-active': arrayOfState[4]}">
+        <div class="front">
+          <img src="https://mobimg.b-cdn.net/v3/fetch/cd/cd9de44487eae25d189157640410f231.jpeg?w=1470&r=0.5625" alt="0">
+        </div>
+        <div class="back">
+          <img src="assets/images/01907d6bab586d1838f26f864ca10b8f.jpg" alt="4">
+        </div>
+      </div>
+
+      <div class="game-card" (click)="rotateCard(5, 3)" [ngClass]="{'game-card-active': arrayOfState[5]}">
+        <div class="front">
+          <img src="https://mobimg.b-cdn.net/v3/fetch/cd/cd9de44487eae25d189157640410f231.jpeg?w=1470&r=0.5625" alt="0">
+        </div>
+        <div class="back">
+          <img src="assets/images/лимон.png" alt="3">
+        </div>
+      </div>
+
+      <div class="game-card" (click)="rotateCard(6, 5)" [ngClass]="{'game-card-active': arrayOfState[6]}">
+        <div class="front">
+          <img src="https://mobimg.b-cdn.net/v3/fetch/cd/cd9de44487eae25d189157640410f231.jpeg?w=1470&r=0.5625" alt="0">
+        </div>
+        <div class="back">
+          <img src="assets/images/я%20на%20смотрю%20на%20закат.png" alt="5">
+        </div>
+      </div>
+
+      <div class="game-card" (click)="rotateCard(7, 6)" [ngClass]="{'game-card-active': arrayOfState[7]}">
+        <div class="front">
+          <img src="https://mobimg.b-cdn.net/v3/fetch/cd/cd9de44487eae25d189157640410f231.jpeg?w=1470&r=0.5625" alt="0">
+        </div>
+        <div class="back">
+          <img src="assets/images/авокадо.png" alt="6">
+        </div>
+      </div>
+
+      <div class="game-card" (click)="rotateCard(8, 5)" [ngClass]="{'game-card-active': arrayOfState[8]}">
+        <div class="front">
+          <img src="https://mobimg.b-cdn.net/v3/fetch/cd/cd9de44487eae25d189157640410f231.jpeg?w=1470&r=0.5625" alt="0">
+        </div>
+        <div class="back">
+          <img src="assets/images/я%20на%20смотрю%20на%20закат.png" alt="5">
+        </div>
+      </div>
+
+      <div class="game-card" (click)="rotateCard(9, 6)" [ngClass]="{'game-card-active': arrayOfState[9]}">
+        <div class="front">
+          <img src="https://mobimg.b-cdn.net/v3/fetch/cd/cd9de44487eae25d189157640410f231.jpeg?w=1470&r=0.5625" alt="0">
+        </div>
+        <div class="back">
+          <img src="assets/images/авокадо.png" alt="6">
+        </div>
+      </div>
+
+      <div class="game-card" (click)="rotateCard(10, 4)" [ngClass]="{'game-card-active': arrayOfState[10]}">
+        <div class="front">
+          <img src="https://mobimg.b-cdn.net/v3/fetch/cd/cd9de44487eae25d189157640410f231.jpeg?w=1470&r=0.5625" alt="0">
+        </div>
+        <div class="back">
+          <img src="assets/images/01907d6bab586d1838f26f864ca10b8f.jpg" alt="4">
+        </div>
+      </div>
+
+      <div class="game-card" (click)="rotateCard(11, 1)" [ngClass]="{'game-card-active': arrayOfState[11]}">
+        <div class="front">
+          <img src="https://mobimg.b-cdn.net/v3/fetch/cd/cd9de44487eae25d189157640410f231.jpeg?w=1470&r=0.5625" alt="0">
+        </div>
+        <div class="back">
+          <img src="assets/images/авокадо2.png" alt="1">
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
+
+
